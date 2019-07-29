@@ -6,12 +6,12 @@ pipeline {
         }
     }
     stages {
-        stage('Npm i') { 
+        stage('Npm install') { 
             steps {
                 sh 'npm install'
             }
         }
-      stage('Build2') { 
+      stage('Build2 develop') { 
             steps {
                 sh 'npm run-script build-prod'
             }
