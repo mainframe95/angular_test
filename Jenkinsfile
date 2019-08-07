@@ -1,21 +1,22 @@
 pipeline {
     agent {
         docker {
-            image 'node' 
+            image 'node'
         }
     }
     stages {
-        stage('Npm install') { 
+        stage('Npm install') {
             steps {
                 sh 'npm install'
             }
         }
-      stage('test unit') { 
-            steps {
-                sh 'npm run-script test'
-            }
-        }
-      stage('Build') { 
+      // stage('test unit') {
+      //       steps {
+      //           sh ''
+      //           // sh 'npm run-script test'
+      //       }
+      //   }
+      stage('Build') {
             steps {
                 sh 'npm run-script build-prod'
             }
