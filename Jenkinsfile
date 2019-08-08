@@ -14,7 +14,7 @@ pipeline {
       stage('Build') {
             steps {
                 sh 'npm run-script build-prod'
-              rocketSend channel: '@rakuemoevi, @jmensah', message: 'test'
+              rocketSend channel: '@jmensah', message: 'test'
             }
         }
     }
