@@ -10,12 +10,11 @@ pipeline {
                 sh 'npm install'
             }
         }
-      // stage('test unit') {
-      //       steps {
-      //           sh ''
-      //           // sh 'npm run-script test'
-      //       }
-      //   }
+       stage('test unit') {
+             steps {
+                rocketSend channel: 'general', message: 'My message', rawMessage: true
+             }
+         }
       stage('Build') {
             steps {
                 sh 'npm run-script build-prod'
