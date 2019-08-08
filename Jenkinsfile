@@ -11,9 +11,7 @@ pipeline {
             }
         }
        stage('test unit') {
-             steps {
-                rocketSend channel: 'general', message: 'My message', rawMessage: true
-             }
+             rocketSend channel: '@rakuemoevi, @jmensah', message: 'test'
          }
       stage('Build') {
             steps {
